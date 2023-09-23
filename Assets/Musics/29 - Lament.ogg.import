@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/29 - Lament.ogg-46a8316dfee0bfe75ee6d31b823b332d.oggstr"
+
+[deps]
+
+source_file="res://Assets/Musics/29 - Lament.ogg"
+dest_files=[ "res://.import/29 - Lament.ogg-46a8316dfee0bfe75ee6d31b823b332d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

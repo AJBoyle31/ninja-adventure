@@ -1,10 +1,11 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Assets/Actor/Characters/GreenNinja/SpriteSheet.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Actor/Characters/Shadow.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Misc/Stats.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Player/Weapons/Sai.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Player/Weapons/Katana.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5, 2 )
@@ -666,10 +667,10 @@ rotation = 1.5708
 [node name="Weapon" type="Node2D" parent="WeaponPosition2D"]
 position = Vector2( 0, 6 )
 
-[node name="Sai" parent="WeaponPosition2D/Weapon" instance=ExtResource( 5 )]
+[node name="Katana" parent="WeaponPosition2D/Weapon" instance=ExtResource( 6 )]
 
-[node name="WeaponSprite" parent="WeaponPosition2D/Weapon/Sai" index="0"]
-rotation = 3.14159
+[node name="Sai" parent="WeaponPosition2D/Weapon" instance=ExtResource( 5 )]
+visible = false
 
 [node name="PlayerSprite" type="Sprite" parent="."]
 position = Vector2( 0, -7 )
@@ -681,5 +682,6 @@ vframes = 7
 
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
 
+[editable path="WeaponPosition2D/Weapon/Katana"]
+[editable path="WeaponPosition2D/Weapon/Katana/WeaponSprite/Hitbox"]
 [editable path="WeaponPosition2D/Weapon/Sai"]
-[editable path="WeaponPosition2D/Weapon/Sai/WeaponSprite/Hitbox"]
